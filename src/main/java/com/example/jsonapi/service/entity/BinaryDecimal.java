@@ -3,8 +3,9 @@ package com.example.jsonapi.service.entity;
 public class BinaryDecimal {
 
     public static String toBinary(int decimalNumber) {
-        String binaryNumber = "You need a number greater than zero";
+        String binaryNumber = "";
         if (decimalNumber <= 0){
+            binaryNumber = "You need a number greater than zero";
             return binaryNumber;
         }
         while (decimalNumber != 0){
