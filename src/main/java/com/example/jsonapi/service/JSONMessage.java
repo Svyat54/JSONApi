@@ -32,6 +32,15 @@ public class JSONMessage {
             this.toDecimal = toDecimal;
             this.inquiry = inquiry;
         }
+
+        @Override
+        public String toString() {
+            return "{" +
+                    "choice='" + choice + '\'' +
+                    ", toDecimal=" + toDecimal +
+                    ", inquiry='" + inquiry + '\'' +
+                    '}';
+        }
     }
 
     public static class OutputMessage implements IMessage {
@@ -49,6 +58,15 @@ public class JSONMessage {
             else {
                 this.toBinary = str;
             }
+        }
+
+        @Override
+        public String toString() {
+            return "{" +
+                    "toDecimal=" + toDecimal +
+                    ", toBinary='" + toBinary + '\'' +
+                    ", hexNumber='" + hexNumber + '\'' +
+                    '}';
         }
     }
     public static class ErrorMessage extends Message {

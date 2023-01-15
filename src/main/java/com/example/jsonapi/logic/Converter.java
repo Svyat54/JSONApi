@@ -10,7 +10,7 @@ public class Converter implements IConverter{
     public JSONMessage.OutputMessage conv(JSONMessage.InputMessage input) {
         String choice = input.choice;
         Integer toDecimal = input.toDecimal;
-        String inquiry = input.inquiry;
+        String  inquiry = input.inquiry;
 
         if(choice.equals("2k10")){
             return new JSONMessage.OutputMessage(BinaryDecimal.toDecimal(inquiry));
